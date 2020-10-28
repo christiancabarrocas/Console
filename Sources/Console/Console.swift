@@ -23,7 +23,7 @@ public enum ConsoleLogType {
 }
 
 @available(iOS 14.0, *)
-struct Console {
+public struct Console {
 
     private static var subsystem = Bundle.main.bundleIdentifier!
 
