@@ -6,7 +6,7 @@
 import Foundation
 import os.log
 
-enum ConsoleErrorType: String {
+public enum ConsoleErrorType: String {
     case networking
     case decoding
     case encoding
@@ -16,7 +16,7 @@ enum ConsoleErrorType: String {
     case unknown
 }
 
-enum ConsoleLogType {
+public enum ConsoleLogType {
     case info
     case debug
     case error
@@ -27,7 +27,7 @@ struct Console {
 
     private static var subsystem = Bundle.main.bundleIdentifier!
 
-    static func log(_ message: String = "", type: ConsoleLogType = .info, subtype: ConsoleErrorType = .none) {
+    public static func log(_ message: String = "", type: ConsoleLogType = .info, subtype: ConsoleErrorType = .none) {
         let customLog = Logger(subsystem: subsystem, category: subtype.rawValue)
         switch type {
         case .debug: customLog.debug("\(message)")
