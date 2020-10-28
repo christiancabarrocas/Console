@@ -1,3 +1,3 @@
 # Console
 
-A description of this package.
+A small wrapper around os.log 
